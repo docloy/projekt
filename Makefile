@@ -4,7 +4,7 @@
 # make install DESTDIR=/path/to/dir
 
 # Vars
-DESTDIR=
+DESTDIR=/tmp
 SCRIPTS=$(DESTDIR)/usr/bin
 
 # help target
@@ -25,8 +25,8 @@ help:
 
 # install target
 install:
-	@install -D -oroot -groot --mode=0744 path/file1 $(DESTDIR)/os/file1
+	@install -D -oroot -groot --mode=0744 file1 $(DESTDIR)/file1
 
 # uninstall target
 uninstall:
-	@rm $(DESTDIR)/os/file1
+	@rm $(DESTDIR)/file1
